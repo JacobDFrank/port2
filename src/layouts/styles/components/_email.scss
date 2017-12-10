@@ -1,0 +1,65 @@
+.email {
+	&-container {
+		background-color: #E1E7E3;
+		width: 100vw;
+		margin: 0;
+		height: 120px;
+	}
+
+	&-button {
+		background: #019082;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+		font-size: .75rem;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 600;
+		padding: 17px 20px;
+		color: #393141;
+		border: none;
+		border-radius: 0;
+		cursor: pointer;
+		&-container {
+			cursor: pointer;
+		}
+		&-container:hover .email-adam {
+			margin-top: -80px;
+		}
+	}
+
+
+	&-adam {
+		position: absolute;
+		margin-left: 10px;
+		margin-top: -68px;
+		transition: ease-in-out .1s;
+	}
+
+	&-input {
+		width: 247px;
+		height: 46px;
+		border: none;
+		margin-right: 21px;
+		padding-top: 0px;
+		padding-bottom: 3px;
+		@include media ('<md') {
+			width: 50vw;
+			margin-right: 2vw;
+		}
+	}
+}
+
+input[placeholder] {
+	color: #241F29;
+	@include media ('<md') {
+		padding-left: 5px;
+	}
+}
+
+
+input::placeholder {
+	padding-left: 20px;
+	color: #241F29;
+	@include media ('<md') {
+		padding-left: 5px;
+	}
+}
