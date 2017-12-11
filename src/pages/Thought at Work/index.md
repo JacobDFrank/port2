@@ -7,12 +7,12 @@ description: 'Managed and worked on a team to design & develop a conference webs
 tags: 'Design / Dev/ Manager'
 volume: '-2'
 homeImage: 'tawCover'
-timePeriod: 'Fall 2016 to Present'
+timePeriod: 'Annually, Completed Each Fall'
 ---
 
 
 ####The Project
-Creation of a design conference website. Tasked with forming a team and building a design conference website from ground up. The Thought at Work Design Conference 2017 website is a project almost complete with dozens of late nights spent on it.
+Creation of a design conference website. Tasked with forming a team and building a design conference website from ground up. The Thought at Work Design Conference 2017 website is a project completed with dozens of late nights spent on it.
 
 
 <br/>
@@ -43,7 +43,7 @@ Project manager, lead developer and member of the design team for the Thought at
 <br/>
 <br/>
 
-![speakers comp](./images/taw/speakers-comp.png)
+![speakers comp](./images/taw/speakers-comp.jpg)
 
 <br/>
 <br/>

@@ -3,15 +3,15 @@ path: '/Pills'
 title: 'Pills'
 published: true
 date: '2017-10-30'
-description: 'Design a set of posters for a local health advertisement'
+description: 'Designed a set of posters for a local health advertisement'
 tags: 'Personal / Design'
-volume: '13'
+volume: '4'
 homeImage: 'gotpillsCover'
 timePeriod: '3 Weeks, August 2017'
 ---
 
 ####Goal
-I was given the brief of creating a set of posters for a pill drive that would be on campus. All included with it was the required copy and black & white requirement. What I'm most proud of with this project is what I learned because the work can always be better.
+I was given the brief of creating a set of posters for a pill drive that would be on campus. Included with it was the required copy and a black & white requirement. What I'm most proud of with this project is what I learned because the work can always be better but you take away is the most important.
 
 <br/>
 <br/>

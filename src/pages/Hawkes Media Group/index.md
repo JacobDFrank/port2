@@ -87,13 +87,13 @@ During the development of the site I found a way to give the client access to a 
 <br/>
 
 
-Check it Out
-<br/>
+####Check it Out
 The current website can be seen <a class="faux-link" href="http://www.hawkesmediagroup.com/">here</a>
 <br/>
-The old site's homepage
-
 <br/>
+<br/>
+The old site's homepage is below
+
 <br/>
 
 ![their work page](./images/hawkes/oldScreenCap.jpg)

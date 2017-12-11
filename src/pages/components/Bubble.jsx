@@ -4,7 +4,7 @@ let testImage = '/assets/empty.gif'
 let scriptURL = '/assets/bubble.js'
 
 class Bubble extends React.Component {
-  
+
   componentDidMount() {
     var load = require('load-script')
 

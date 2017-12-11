@@ -6,7 +6,7 @@ class Footer extends React.Component {
     return (
       <footer>
         <div className="footer-container">
-  				<div className="copyright">© <span id="copyright">2017</span> <a href="https://www.jacobdfrank.com/index.html">Jacob Frank</a></div>
+  				<div className="copyright">© <span id="copyright">2017</span></div>
   				<div className="courtesy">
   					<div className="email">Email me</div>
   					<a href="https://www.jacobdfrank.com/media/Jacob_Frank_Resume.pdf">Resume</a>

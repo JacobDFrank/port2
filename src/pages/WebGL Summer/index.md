@@ -3,7 +3,7 @@ path: '/WebGL'
 title: 'WebGL Summer'
 published: true
 date: '2017-12-10'
-description: 'Taught myself WebGL through constant iteration and daily creations'
+description: 'Learned WebGL by stumbling and getting up again and again and again'
 tags: 'WebGL / Personal'
 volume: '3'
 homeImage: 'cells'
