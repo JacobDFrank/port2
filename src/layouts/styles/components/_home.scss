@@ -604,7 +604,8 @@ canvas.tease {
 
 @media screen and (max-width: 400px) {
 	.wrapper {
-		padding: 0 1em;
+		padding: 0 0 0 1em;
+		width: 90%;
 		font-size: 0.8em;
 	}
 	section {
