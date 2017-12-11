@@ -1,7 +1,7 @@
-$color_1: white;
-$color_2: #FF627B;
+$color_1: #729CAD;
+$SPBlue: #223880;
 $color_3: inherit;
-$color_4: #fff;
+$offWhite: #fff;
 $color_5: #FF356A;
 $color_6: #829cce;
 $color_7: #2F3351;
@@ -9,20 +9,17 @@ $color_8: #0A3FDD;
 $color_9: #303F8B;
 $color_10: #7130db;
 $color_11: #888;
-$font_family_1: "GT America", sans-serif;
-$font_family_2: "GT America", serif;
-$font_family_3: "Roboto Mono", sans-serif;
+$sans-serif: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+$font_family_3: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier;
 $background_color_1: #7130db;
-$background_color_2: #FBCFA9;
+$background_SPBlue: #FBCFA9;
 $background_color_3: #F3BDC3;
-$background_color_4: white;
+$background_offWhite: white;
 $background_color_5: #A9B4BA;
 $background_color_6: #fff;
 $background_color_7: transparent;
 $background_color_8: #FF627B;
 
-@charset "UTF-8";
-// @import "https://fonts.googleapis.com/css?family=Roboto+Mono";
 @-webkit-keyframes "blink" {
 	0% {
 		opacity: 0.5;
@@ -57,22 +54,18 @@ $background_color_8: #FF627B;
 	}
 }
 * {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-
 ::-moz-selection {
-	background: #fff;
-	color: $color_1;
+	background: $SPBlue;
+	color: $offWhite;
 }
 ::selection {
-	background: #fff;
-	color: $color_1;
+	background: $SPBlue;
+	color: $offWhite;
 }
 }
 html {
 	height: auto;
 	width: 100%;
-	margin: 0;
 	overflow-x: hidden;
 }
 .body {
@@ -80,14 +73,13 @@ html {
 	width: 100%;
 	margin: 0;
 	overflow-x: hidden;
-	font-family: $font_family_1;
+	font-family: $sans-serif;
 	font-size: 20px;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
 .body.home-colors {
-	color: $color_2;
-	background: #fff;
+	color: $SPBlue;
 	background-size: cover;
 	.faux-link {
 		color: $color_3;
@@ -105,20 +97,20 @@ html {
 			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(65%, transparent), color-stop(0, white));
 			background-image: linear-gradient(180deg, transparent 55%, #FF627B 0);
 			&~.meta-data {
-				color: $color_4;
+				color: $offWhite;
 			}
 		}
 	}
 	.code {
-		color: $color_2;
+		color: $SPBlue;
 		opacity: 0.5;
 	}
 }
 .body.khroma-colors {
-	color: $color_2;
+	color: $SPBlue;
 	background: #02142B;
 	.neat-thing {
-		color: $color_2;
+		color: $SPBlue;
 	}
 	.faux-link {
 		color: $color_3;
@@ -136,7 +128,7 @@ html {
 			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(65%, transparent), color-stop(0, #7130db));
 			background-image: linear-gradient(180deg, transparent 65%, #7130db 0);
 			&~.meta-data {
-				color: $color_4;
+				color: $offWhite;
 			}
 		}
 	}
@@ -150,7 +142,7 @@ html {
 			content: attr(data-buzzword);
 			-webkit-transform: rotateZ(-45deg) translate3d(-15px, -30px, 0);
 			transform: rotateZ(-45deg) translate3d(-15px, -30px, 0);
-			font-family: $font_family_2;
+			font-family: $sans-serif;
 			font-size: 0.7em;
 			text-transform: uppercase;
 			color: $color_5;
@@ -192,13 +184,13 @@ html {
 			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(65%, transparent), color-stop(0, #FBCFA9));
 			background-image: linear-gradient(180deg, transparent 65%, #FBCFA9 0);
 			&~.meta-data {
-				color: $color_4;
+				color: $offWhite;
 			}
 		}
 	}
 	.code {
 		color: $color_7;
-		background-color: $background_color_2;
+		background-color: $background_SPBlue;
 	}
 	.buzzword {
 		&:before {
@@ -216,7 +208,7 @@ html {
 	color: $color_9;
 	background-color: $background_color_3;
 	.code {
-		background-color: $background_color_4;
+		background-color: $background_offWhite;
 		color: $color_9;
 	}
 	.media-caption {
@@ -238,7 +230,7 @@ html {
 			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(65%, transparent), color-stop(0, white));
 			background-image: linear-gradient(180deg, transparent 55%, #FF627B 0);
 			&~.meta-data {
-				color: $color_4;
+				color: $offWhite;
 			}
 		}
 	}
@@ -300,7 +292,7 @@ span.code {
 	font-family: $font_family_3;
 	font-size: 0.85em;
 	background-color: $background_color_5;
-	color: $color_2;
+	color: $SPBlue;
 }
 .meta-data {
 	&+h2 {
@@ -409,7 +401,7 @@ pre.code-block {
 .redacted {
 	&:after {
 		content: attr(data-char-count);
-		color: $color_4;
+		color: $offWhite;
 		background-color: $background_color_6;
 	}
 }
@@ -419,7 +411,7 @@ pre.code-block {
 		content: attr(data-buzzword);
 		-webkit-transform: rotateZ(-45deg) translate3d(-15px, -30px, 0);
 		transform: rotateZ(-45deg) translate3d(-15px, -30px, 0);
-		font-family: $font_family_2;
+		font-family: $sans-serif;
 		font-size: 0.7em;
 		text-transform: uppercase;
 		color: $color_5;
@@ -575,7 +567,7 @@ section.content {
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	background-color: $background_color_8;
-	color: $color_4;
+	color: $offWhite;
 	-webkit-transform: translate3d(50%, 0, 0);
 	transform: translate3d(50%, 0, 0);
 	-webkit-transition: all 0.5s cubic-bezier(0, 0.99, 0, 0.99);

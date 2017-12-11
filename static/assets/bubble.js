@@ -1,4 +1,5 @@
-'use strict';
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+console.log('script loaded');
 
 let showT;
 let canvasScaled = false;
@@ -7,7 +8,7 @@ let wavelength = .3;
 let radius = 100;
 let animate;
 
-let canvas = this.refs.jawn;
+const canvas = document.getElementById('bubble');
 const ctx = canvas.getContext('2d');
 const POLY = 20;
 const STEP = 3*Math.PI/POLY;
@@ -24,45 +25,10 @@ const canvasImages = {
   'eonImg': document.createElement('canvas'),
 };
 
-var showToaster = function(content, duration) {
-  var toaster = document.querySelector('.toaster');
-  clearTimeout(showT);
-  toaster.innerText = content;
-  toaster.classList.add('show');
-  showT = setTimeout(function() {
-    toaster.classList.remove('show');
-  }, duration);
-};
-
-var copyToClipboard = function(content) {
-  var getInput = function() {
-    var input = document.querySelector('#copyInput');
-    if(input === null) {
-      input = document.createElement('textarea');
-      input.setAttribute('id', 'copyInput');
-      input.setAttribute('style', 'position: absolute; left: -999em;');
-      document.body.appendChild(input);
-    }
-    else {
-      input.style.position = 'absolute';
-      input.style.left = '-999em';
-    }
-    return input;
-  };
-  var input = getInput();
-  input.value = content;
-  input.select();
-  document.execCommand('copy');
-};
-
 var bindEvents = function() {
-  document.querySelector('.email').onclick = function() {
-    copyToClipboard('g.hastings3@gmail.com');
-    showToaster('Copied to clipboard.', 3000);
-  };
 
   document.querySelectorAll('[data-teaser]').forEach(function(teaser) {
-    const canvas = document.getElementById('jawn');
+    const canvas = document.getElementById('bubble');
     teaser.onmouseenter = function() {
       const src = teaser.getAttribute('data-teaser');
       const freq = teaser.getAttribute('data-freq');
@@ -100,51 +66,13 @@ var bindEvents = function() {
       initCanvas(false);
     };
   });
-
-  var fixed = document.getElementById('aboutme');
-  fixed.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-  }, false);
-};
-
-var renderCopyrightYear = function() {
-  var date = new Date();
-  var year = date.getYear();
-  document.getElementById('copyright').innerHTML = `${1900 + year}`;
-};
-
-var printName = function() {
-  console.log(`
-
-
-          # ###        #####    ##
-        /  /###  /  ######  /  #### /
-       /  /  ###/  /#   /  /   ####/
-      /  ##   ##  /    /  /    # #
-     /  ###           /  /     #
-    ##   ##          ## ##     #
-    ##   ##   ###    ## ##     #
-    ##   ##  /###  / ## ########
-    ##   ## /  ###/  ## ##     #
-    ##   ##/    ##   ## ##     ##
-     ##  ##     #    #  ##     ##
-      ## #      /       /       ##
-       ###     /    /##/        ##
-        ######/    /  #####      ##
-          ###     /     ##
-                  #
-                   ##
-
-
-
-`);
 };
 
 var initCanvas = function(image) {
   let dpr = window.devicePixelRatio || 1;
   let startingTheta = 0;
   let count = 0;
-  let colors = ['#F78FAC', '#0E22F8'];
+  let colors = ['#C54143', '#F8F8F8'];
   var dataSine = [];
   cancelAnimationFrame(animate);
 
@@ -236,9 +164,16 @@ var init = function() {
     preLoadCanvasImages();
     initCanvas(false, 1);
   }
-  renderCopyrightYear();
   bindEvents();
-  printName();
 };
 
 init();
+
+},{}],2:[function(require,module,exports){
+const bubbles = require('./bub.js');
+
+window.onload = function() {
+    console.log("bubbles included", bubbles);
+}
+
+},{"./bub.js":1}]},{},[2]);

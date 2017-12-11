@@ -7,7 +7,6 @@ import favicon from '../assets/favicon.png';
 import Social from '../assets/social.png';
 
 
-
 import './index.scss'
 
 const TemplateWrapper = ({children}) => (<div>
@@ -42,8 +41,6 @@ const TemplateWrapper = ({children}) => (<div>
     <title>Jacob Frank - Developer &amp; Designer</title>
     <link rel="shortcut icon" href={favicon} type="image/x-icon"/>
     <link rel="icon" href={favicon} type="image/x-icon"/>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Source+Sans+Pro:300,300i,400,600,700" rel="stylesheet"/>
-
 
   </Helmet>
   <div>

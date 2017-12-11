@@ -9,6 +9,7 @@ import Projects from './components/Projects'
 import Intro from './components/Intro'
 import Header from './components/Header'
 import Bubble from './components/Bubble'
+import AboutMe from './components/AboutMe'
 
 const IndexPage = ({data}) => (
   <div className="body home-colors">
@@ -44,6 +45,7 @@ export const pageQuery = graphql `
             path
             published
             date
+            description
           }
         }
       }
