@@ -19,10 +19,11 @@ const CENTER = {
 };
 
 const canvasImages = {
-  'khromaImg': document.createElement('canvas'),
-  'floodhelpImg': document.createElement('canvas'),
-  'romeImg': document.createElement('canvas'),
-  'eonImg': document.createElement('canvas'),
+  'breelCover': document.createElement('canvas'),
+  'gotpillsCover': document.createElement('canvas'),
+  'tawCover': document.createElement('canvas'),
+  'cells': document.createElement('canvas'),
+  'hawkesCover': document.createElement('canvas'),
 };
 
 var bindEvents = function() {
@@ -125,27 +126,31 @@ var initCanvas = function(image) {
 var preLoadCanvasImages = function() {
   const images = [
     {
-      el: canvasImages.khromaImg,
-      src: 'khroma_teaser-copy'
+      el: canvasImages.breelCover,
+      src: 'breelCover'
     },
     {
-      el: canvasImages.floodhelpImg,
-      src: 'fh_teaser-copy'
+      el: canvasImages.gotpillsCover,
+      src: 'gotpillsCover'
     },
     {
-      el: canvasImages.romeImg,
-      src: 'rome_dusk_med-copy2'
+      el: canvasImages.hawkesCover,
+      src: 'hawkesCover'
     },
     {
-      el: canvasImages.eonImg,
-      src: 'eon_teaser-copy'
+      el: canvasImages.tawCover,
+      src: 'tawCover'
+    },
+    {
+      el: canvasImages.cells,
+      src: 'cells'
     }
   ];
   images.forEach(function(image){
     const size = 2560;
     var img = new Image();
     var tempTx = image.el.getContext('2d');
-    img.src = `assets/images/${image.src}.png`;
+    img.src = `images/${image.src}.png`;
     img.addEventListener('load', function() {
         image.el.width = size;
         image.el.height = size;

@@ -19,6 +19,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             tags
             volume
             homeImage
+            timePeriod
           }
         }
       }

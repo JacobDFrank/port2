@@ -1,11 +1,12 @@
 import React from 'react';
+import Link from 'gatsby-link'
 
 class Header extends React.Component {
 
   render() {
     return (<header>
-      <a href="https://www.jacobdfrank.com/">Jacob Frank</a>
-      <a href="#aboutme">About</a>
+      <Link to="/" className="faux-link">Jacob Frank</Link>
+      {/* <a href=.#aboutme">About</a> */}
     </header>);
   }
 }
