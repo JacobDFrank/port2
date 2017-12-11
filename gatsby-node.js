@@ -16,6 +16,9 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             title
             date
             description
+            tags
+            volume
+            homeImage
           }
         }
       }

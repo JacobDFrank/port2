@@ -4,20 +4,7 @@ let testImage = '/assets/empty.gif'
 let scriptURL = '/assets/bubble.js'
 
 class Bubble extends React.Component {
-
-  // componentDidMount () {
-  //   if (!document.getElementById("boobles")) {
-  //     const script = document.createElement("script");
-  //     script.setAttribute("id", "boobles");
-  //
-  //     script.src = __PATH_PREFIX__ + scriptURL;
-  //     script.async = true;
-  //     script.defer = true;
-  //
-  //     document.body.appendChild(script);
-  //   }
-  // }
-
+  
   componentDidMount() {
     var load = require('load-script')
 

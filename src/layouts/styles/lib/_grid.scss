@@ -23,7 +23,7 @@ $toast-pulls: true !default;
 
 .#{$toast-grid-namespace} {
   list-style: none;
-  margin-left: -$toast-gutter-width;
+  // margin-left: -$toast-gutter-width;
 }
 
 %span-all       { width: percentage(1/1); }

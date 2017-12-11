@@ -27,11 +27,11 @@ const canvasImages = {
 
 var bindEvents = function() {
 
-  document.querySelectorAll('[data-teaser]').forEach(function(teaser) {
+  document.querySelectorAll('[data-homeImage]').forEach(function(teaser) {
     const canvas = document.getElementById('bubble');
     teaser.onmouseenter = function() {
-      const src = teaser.getAttribute('data-teaser');
-      const freq = teaser.getAttribute('data-freq');
+      const src = teaser.getAttribute('data-homeImage');
+      const freq = teaser.getAttribute('data-volume');
       canvas.classList.add('tease');
       wavelength = +freq;
 

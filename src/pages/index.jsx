@@ -5,27 +5,25 @@ import Link from 'gatsby-link'
 // import Mailchimp from './components/Mailchimp'
 // import About from './components/About'
 import Footer from './components/Footer'
-import Projects from './components/Projects'
 import Intro from './components/Intro'
 import Header from './components/Header'
 import Bubble from './components/Bubble'
 import AboutMe from './components/AboutMe'
 
-const IndexPage = ({data}) => (
-  <div className="body home-colors">
+const IndexPage = ({data}) => (<div className="body home-colors">
   <div id="app" className="wrapper">
-    <ul>
-      {
-        data.allMarkdownRemark.edges.map(post => (<li key={post.node.id}>
-          <Link to={post.node.frontmatter.path}>
-            {post.node.frontmatter.title}
-          </Link>
-        </li>))
-      }
-    </ul>
     <Header/>
     <Intro/>
-    <Projects/>
+    <section className="projects grid">
+      {
+        data.allMarkdownRemark.edges.map(post => (<div className="project grid__col grid__col--1-of-3" key={post.node.id}>
+          <span className="meta-data code">{post.node.frontmatter.tags}</span>
+          <Link to={post.node.frontmatter.path} className="faux-link">
+            <span data-volume={post.node.frontmatter.volume} data-homeImage={post.node.frontmatter.homeImage}>{post.node.frontmatter.description}</span>
+          </Link>
+        </div>))
+      }
+    </section>
     <Footer/>
   </div>
   <Bubble/>
@@ -46,6 +44,9 @@ export const pageQuery = graphql `
             published
             date
             description
+            tags
+            volume
+            homeImage
           }
         }
       }

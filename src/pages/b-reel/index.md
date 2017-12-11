@@ -1,9 +1,12 @@
 ---
 path: '/B-Reel'
-title: 'Internship / Creative Tech'
+title: 'B-Reel NYC Internship'
 published: true
-date: '2017-10-24'
-description: 'Worked as a creative tech intern at B-Reel NYC contributing to various projects for Fortune 500 Companies'
+date: '2017-12-10'
+description: 'Spent summer 2017 at B-Reel NYC, Designing, Coding, and Learning'
+tags: 'Internship / Creative Tech'
+volume: '4'
+homeImage: 'khromaImg'
 ---
 
 Hello! This is our first blog post.

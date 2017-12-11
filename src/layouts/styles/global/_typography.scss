@@ -1,3 +1,27 @@
+$color_1: #729CAD;
+$SPBlue: #223880;
+$color_3: inherit;
+$offWhite: #fff;
+$color_5: #FF356A;
+$color_6: #829cce;
+$color_7: #2F3351;
+$color_8: #0A3FDD;
+$color_9: #303F8B;
+$color_10: #7130db;
+$color_11: #888;
+$background_color_1: #7130db;
+$background_SPBlue: #FBCFA9;
+$background_color_3: #F3BDC3;
+$background_offWhite: white;
+$background_color_5: #A9B4BA;
+$background_color_6: #fff;
+$background_color_7: transparent;
+$reddish: #223880;
+
+$sans-serif: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+$mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier;
+
+
 html {
 	font-size: 18px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -6,21 +30,19 @@ html {
 }
 
 p {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: $sans-serif;
 	font-size: .9rem;
 	margin: 0;
+}
+
+pre,
+code {
+	font-family: $mono;
 }
 
 a {
 	text-decoration: none;
 	color: inherit;
-}
-
-h1 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 1.5em;
-	font-weight: 200;
-	margin: 0;
 }
 
 @function vw($target) {
@@ -41,4 +63,89 @@ h5,
 h6,
 p {
 	margin: 0;
+}
+
+h1 {
+	margin-top: 0;
+	height: auto;
+	width: 100%;
+	overflow-x: hidden;
+	font-family: $sans-serif;
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+h2 {
+	margin-top: 0;
+	font-size: 2.828em;
+	font-weight: normal;
+	span {
+		font-family: $mono;
+		opacity: 0.5;
+		font-size: 18px;
+	}
+	&+p {
+		margin-top: 3em;
+	}
+}
+h3 {
+	margin-top: 0;
+	font-size: 2em;
+	font-weight: normal;
+}
+h3.block-quote {
+	position: relative;
+	font-weight: bold;
+	margin: 2em 0 2em 1em;
+	&:before {
+		position: absolute;
+		content: "";
+		left: -1em;
+		width: 2px;
+		height: 100%;
+		background-color: $background_color_1;
+	}
+}
+.subline {
+	font-size: 1.414em;
+	font-weight: bold;
+	line-height: 1.414;
+	margin-bottom: 2em;
+}
+a {
+	color: $color_3;
+	text-decoration: none;
+	line-height: 1.55em;
+}
+p {
+	line-height: 1.55em;
+}
+span.code {
+	font-family: $mono;
+	font-size: 0.85em;
+	background-color: $background_color_5;
+	color: $SPBlue;
+}
+pre {
+	line-height: 1.4em;
+}
+pre.code-block {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	margin: 1em 0;
+	padding: 1em 1em 1em 3em;
+	font-size: 0.7em;
+	font-family: $mono;
+	&:after {
+		position: absolute;
+		display: inline-block;
+		top: 1em;
+		left: 20px;
+		content: "123456789⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛";
+		width: 1em !important;
+		word-break: break-all;
+		white-space: pre-line;
+		color: $color_10;
+	}
 }
