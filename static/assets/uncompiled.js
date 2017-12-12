@@ -1,18 +1,18 @@
 let showT;
 let canvasScaled = false;
-let ungulator = .2;
-let wavelength = 4;
-let radius = 70;
+let ungulator = 2;
+let wavelength = .3;
+let radius = 100;
 let animate;
 
 const canvas = document.getElementById('bubble');
 const ctx = canvas.getContext('2d');
 const POLY = 20;
-const STEP = 2 * Math.PI / POLY;
+const STEP = 3*Math.PI/POLY;
 const LENGTH = 2 * Math.PI;
 const CENTER = {
-  x: canvas.width / 4,
-  y: canvas.height / 4
+  x: canvas.width/4,
+  y: canvas.height/4
 };
 
 const canvasImages = {
@@ -20,7 +20,7 @@ const canvasImages = {
   'gotpillsCover': document.createElement('canvas'),
   'tawCover': document.createElement('canvas'),
   'cells': document.createElement('canvas'),
-  'hawkesCover': document.createElement('canvas')
+  'hawkesCover': document.createElement('canvas'),
 };
 
 var bindEvents = function() {
@@ -31,18 +31,18 @@ var bindEvents = function() {
       const src = teaser.getAttribute('data-homeImage');
       const freq = teaser.getAttribute('data-volume');
       canvas.classList.add('tease');
-      wavelength = + freq;
+      wavelength = +freq;
 
-      let steps = 10;
+      let steps = 30;
       let count = 0;
       function tick() {
-        if (count < steps) {
-          ungulator += 3 / steps;
+        if(count < steps) {
+          ungulator += 5/steps;
           count++;
           requestAnimationFrame(tick);
         }
-      }
-      tick();
+    	}
+    	tick();
 
       initCanvas(canvasImages[src]);
     };
@@ -53,13 +53,13 @@ var bindEvents = function() {
       wavelength = 1;
 
       function tick() {
-        if (count < steps) {
-          ungulator -= 5 / steps;
+        if(count < steps) {
+          ungulator -= 5/steps;
           count++;
           requestAnimationFrame(tick);
         }
-      }
-      tick();
+    	}
+    	tick();
 
       initCanvas(false);
     };
@@ -74,19 +74,20 @@ var initCanvas = function(image) {
   var dataSine = [];
   cancelAnimationFrame(animate);
 
-  if (window.devicePixelRatio === 1) {
+  if(window.devicePixelRatio === 1) {
     dpr = 2;
   }
 
-  if (!canvasScaled) {
-    ctx.scale(dpr, dpr);
+  if(!canvasScaled) {
+    ctx.scale(dpr,dpr);
     canvasScaled = true;
   }
 
-  if (image) {
+  if(image) {
     ctx.fillStyle = ctx.createPattern(image, 'no-repeat');
-  } else {
-    let myGrad = ctx.createRadialGradient(canvas.width / 4, canvas.height / 4, canvas.height / 4, canvas.width / 4, canvas.height / 1.5, 0);
+  }
+  else {
+    let myGrad = ctx.createRadialGradient(canvas.width/4, canvas.height/4, canvas.height/4, canvas.width/4, canvas.height/1.5, 0);
     myGrad.addColorStop(1, colors[0]);
     myGrad.addColorStop(0, colors[1]);
     ctx.strokeStyle = 'transparent';
@@ -94,24 +95,24 @@ var initCanvas = function(image) {
   }
 
   var draw = function() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0,0,canvas.width, canvas.height);
     ctx.beginPath();
-    let rotation = count * 0.1;
+    let rotation = count*0.1;
     dataSine.length = 0;
 
-    for (let i = 0; i < POLY; i++) {
-      dataSine.push(Math.sin((i / wavelength + rotation)) * ungulator);
+    for(let i = 0; i < POLY; i++) {
+      dataSine.push(Math.sin((i/wavelength + rotation))*ungulator);
     }
 
-    for (let theta = startingTheta; theta < LENGTH; theta += STEP) {
-      let point = dataSine[(theta / STEP).toFixed(0)];
+    for(let theta = startingTheta;  theta < LENGTH;  theta += STEP) {
+      let point = dataSine[(theta/STEP).toFixed(0)];
       let x = CENTER.x + (radius + point) * Math.cos(theta);
       let y = CENTER.y + (radius + point) * Math.sin(theta);
-      ctx.lineTo(x, y);
+      ctx.lineTo(x,y);
     }
     ctx.closePath();
     ctx.fill();
-    ctx.stroke();
+  	ctx.stroke();
 
     count++;
     animate = requestAnimationFrame(draw);
@@ -124,29 +125,33 @@ var preLoadCanvasImages = function() {
     {
       el: canvasImages.breelCover,
       src: 'breelCover'
-    }, {
+    },
+    {
       el: canvasImages.gotpillsCover,
       src: 'gotpillsCover'
-    }, {
+    },
+    {
       el: canvasImages.hawkesCover,
       src: 'hawkesCover'
-    }, {
+    },
+    {
       el: canvasImages.tawCover,
       src: 'tawCover'
-    }, {
+    },
+    {
       el: canvasImages.cells,
       src: 'cells'
     }
   ];
-  images.forEach(function(image) {
+  images.forEach(function(image){
     const size = 2560;
     var img = new Image();
     var tempTx = image.el.getContext('2d');
     img.src = `images/${image.src}.png`;
     img.addEventListener('load', function() {
-      image.el.width = size;
-      image.el.height = size;
-      tempTx.drawImage(img, 0, 0, img.width, img.height, 0, 0, size / 8, size / 8);
+        image.el.width = size;
+        image.el.height = size;
+        tempTx.drawImage(img, 0, 0, img.width, img.height, 0, 0, size/8, size/8);
     }, true);
     image.el.setAttribute('style', 'visibility: hidden; position: absolute; left: -9999em;');
     document.body.appendChild(image.el);
@@ -156,7 +161,7 @@ var preLoadCanvasImages = function() {
 };
 
 var init = function() {
-  if (document.querySelector('canvas')) {
+  if(document.querySelector('canvas')){
 
     preLoadCanvasImages();
     initCanvas(false, 1);
