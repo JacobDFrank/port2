@@ -5,6 +5,10 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@ibm/type": "^0.5.3",
+    "babel-eslint": "^8.1.1",
+    "eslint": "^4.14.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.40.1",
     "gatsby": "^1.9.129",
     "gatsby-link": "^1.6.31",
     "gatsby-plugin-catch-links": "^1.0.14",
@@ -23,6 +27,7 @@
     "invariant": "^2.2.2",
     "load-script": "^1.0.0",
     "normalize-scss": "^7.0.0",
+    "react": "^16.2.0",
     "react-mailchimp-subscribe": "^1.0.3",
     "react-responsive": "^4.0.3",
     "sass-rem": "^2.0.0"
