@@ -1,9 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-// import Eboard from './components/Eboard'
-// import Mailchimp from './components/Mailchimp'
-// import About from './components/About'
 import Footer from './components/Footer'
 import Intro from './components/Intro'
 import Header from './components/Header'
