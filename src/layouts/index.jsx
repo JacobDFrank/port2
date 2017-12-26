@@ -6,8 +6,10 @@ import Helmet from 'react-helmet'
 import favicon from '../assets/favicon.png';
 import Social from '../assets/social.png';
 
-
 import './index.scss'
+
+const description = "Designer, Developer, Student";
+const socialImage = "https://jacobdfrank.com/media/social.png";
 
 const TemplateWrapper = ({children}) => (<div>
   <Helmet>
@@ -18,23 +20,23 @@ const TemplateWrapper = ({children}) => (<div>
     <meta http-equiv="Content-Language" content="en"/>
     <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=no"/>
 
-    <meta name="description" content="Developer, Designer, Student"/>
+    <meta name="description" content={description}/>
 
     <meta property="og:title" content="Jacob Frank; Developer, Designer, and Student"/>
-    <meta property="og:description" content="Developer, Designer, and Student at RIT"/>
+    <meta property="og:description" content={description}/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="http://jacobdfrank.com/media/social.png"/>
+    <meta property="og:image" content={socialImage}/>
     <meta property="og:image:type" content="image/jpeg"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
-    <meta property="og:site_name" content="http://jacob"/>
-    <meta property="og:url" content="http://jacobdfrank.com"/>
+    <meta property="og:site_name" content="https://jacobdfrank.com"/>
+    <meta property="og:url" content="https://jacobdfrank.com"/>
 
     <meta name="apple-mobile-web-app-capable" content="yes"/>
 
-    <meta itemprop="name" content="New Media Club at RIT"/>
-    <meta itemprop="description" content="Website for the New Media Club at RIT"/>
-    <meta itemprop="image" content="New Media Club at RIT"/>
+    <meta itemprop="name" content="Jacob Frank"/>
+    <meta itemprop="description" content={description}/>
+    <meta itemprop="image" content={socialImage}/>
 
     <meta name="author" content="Jacob Frank"/>
 

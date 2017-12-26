@@ -1,88 +1,119 @@
-.about {
-	margin: 105px auto 80px;
-	max-width: 820px;
-	width: 82vw;
-	flex-direction: row;
-	@include media('<md') {
-		margin-left: auto;
-		margin-right: auto;
-		width: auto;
-		flex-direction: column;
-		&-media {
-			margin-left: 0;
-			margin-right: 0;
-		}
-	}
-	&-text {
-		@include media('<xs') {
-			width: 81vw;
-		}
-		@include media('<md') {
-			margin-top: 75px;
-			margin-left: 10vw;
-    	margin-right: 10vw;
-			max-width: 415px;
-		}
-		&-header {
-			margin-bottom: 25px;
-			line-height: 1.65;
-			@include media('<md') {
-				width: inherit;
-			}
-			&-underline {
-				text-decoration: underline;
-				text-decoration-color: $teal;
-			}
-		}
-		&-info {
-			font-size: 1rem;
-			line-height: 1.30rem;
-			font-family: 'Source Sans Pro', sans-serif;
-		}
-		&-reference {
-			font-size: .75rem;
-			font-family: 'Source Sans Pro', sans-serif;
-			font-style: italic;
-			color: #7D7D7D;
-			font-weight: 200;
-		}
-	}
-	&-media {
-		margin-left: 24px;
-		margin-right: 10.5vw;
-		@include media('<md') {
-			margin-left: 0;
-			margin-right: 0px;
-		}
-		@include media('>lg') {
-			margin-right: 107px;
-		}
-		&-NMC_logo {
-			width: 267.887px;
-			margin-bottom: 19px;
-		}
-		&-links {
-			width: 30%;
-			margin-top: 37.5px;
+.about
+{
+    flex-direction: row;
 
-			&-sites {
-				font-family: 'Raleway', sans-serif;
-				color: $normal-grey;
-				font-size: rem(12px);
-				&-space {
-					padding-right: 15px;
-				}
-			}
-			&-logos {
-				margin-bottom: 22px;
-			}
-			&-logo {
-				width: 24px;
-				color: $normal-grey;
-				&:first-child {
-					margin-right: 20px;
-				}
-			}
-		}
-	}
+    width: 82vw;
+    max-width: 820px;
+    margin: 105px auto 80px;
+
+    @include media('<md')
+    {
+        flex-direction: column;
+
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+        &-media
+        {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    &-text
+    {
+        @include media('<xs')
+        {
+            width: 81vw;
+        }
+        @include media('<md')
+        {
+            max-width: 415px;
+            margin-top: 75px;
+            margin-right: 10vw;
+            margin-left: 10vw;
+        }
+        &-header
+        {
+            line-height: 1.65;
+
+            margin-bottom: 25px;
+
+            @include media('<md')
+            {
+                width: inherit;
+            }
+            &-underline
+            {
+                text-decoration: underline;
+
+                text-decoration-color: $teal;
+            }
+        }
+        &-info
+        {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;
+            line-height: 1.30rem;
+        }
+        &-reference
+        {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: .75rem;
+            font-weight: 200;
+            font-style: italic;
+
+            color: #7d7d7d;
+        }
+    }
+    &-media
+    {
+        margin-right: 10.5vw;
+        margin-left: 24px;
+
+        @include media('<md')
+        {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        @include media('>lg')
+        {
+            margin-right: 107px;
+        }
+        &-NMC_logo
+        {
+            width: 267.887px;
+            margin-bottom: 19px;
+        }
+        &-links
+        {
+            width: 30%;
+            margin-top: 37.5px;
+
+            &-sites
+            {
+                font-family: 'Raleway', sans-serif;
+                font-size: rem(12px);
+
+                color: $normal-grey;
+                &-space
+                {
+                    padding-right: 15px;
+                }
+            }
+            &-logos
+            {
+                margin-bottom: 22px;
+            }
+            &-logo
+            {
+                width: 24px;
+
+                color: $normal-grey;
+                &:first-child
+                {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
 }

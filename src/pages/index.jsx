@@ -1,10 +1,10 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
-import Footer from './components/Footer'
-import Intro from './components/Intro'
-import Header from './components/Header'
-import Bubble from './components/Bubble'
+import Footer from './components/Footer';
+import Intro from './components/Intro';
+import Header from './components/Header';
+import Bubble from './components/Bubble';
 // import AboutMe from './components/AboutMe'
 
 const IndexPage = ({ data }) => (
@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => (
       <Footer />
     </div>
     <Bubble />
-  </div>)
+  </div>);
 
 export const pageQuery = graphql`
   query IndexQuery { allMarkdownRemark(
@@ -53,6 +53,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

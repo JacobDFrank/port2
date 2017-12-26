@@ -1,14 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-let testImage = '/assets/empty.gif'
-let scriptURL = '/assets/bubble.js'
+
+const testImage = '/assets/empty.gif';
+const scriptURL = '/assets/bubble.js';
 
 class Bubble extends React.Component {
-
   componentDidMount() {
-    var load = require('load-script')
+    const load = require('load-script');
 
-    load(__PATH_PREFIX__ + scriptURL, function(err, script) {
+    load(__PATH_PREFIX__ + scriptURL, (err, script) => {
       if (err) {
         // print useful message
       } else {
@@ -16,24 +15,40 @@ class Bubble extends React.Component {
         // use script
         // note that in IE8 and below loading error wouldn't be reported
       }
-    })
+    });
   }
 
   render() {
     return (<div>
-      <canvas id="bubble" width="640" height="640"></canvas>
-      <canvas style={{
-          display: 'none'
-        }} width="2560" height="2560"></canvas>
-      <canvas style={{
-          display: 'none'
-        }} width="2560" height="2560"></canvas>
-      <canvas style={{
-          display: 'none'
-        }} width="2560" height="2560"></canvas>
-      <canvas style={{
-          display: 'none'
-        }} width="2560" height="2560"></canvas>
+      <canvas id="bubble" width="640" height="640" />
+      <canvas
+        style={{
+          display: 'none',
+        }}
+        width="2560"
+        height="2560"
+      />
+      <canvas
+        style={{
+          display: 'none',
+        }}
+        width="2560"
+        height="2560"
+      />
+      <canvas
+        style={{
+          display: 'none',
+        }}
+        width="2560"
+        height="2560"
+      />
+      <canvas
+        style={{
+          display: 'none',
+        }}
+        width="2560"
+        height="2560"
+      />
     </div>);
   }
 }
