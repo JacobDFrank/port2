@@ -1,7 +1,8 @@
 import React from 'react';
 
 const testImage = '/assets/empty.gif';
-const scriptURL = '/assets/bubble.js';
+// const scriptURL = '/assets/bubble.js';
+const scriptURL = '/assets/uncompiled.js';
 
 class Bubble extends React.Component {
   componentDidMount() {
@@ -20,7 +21,7 @@ class Bubble extends React.Component {
 
   render() {
     return (<div>
-      <canvas id="bubble" width="640" height="640" />
+      <canvas id="bubble" width="720" height="720" />
       <canvas
         style={{
           display: 'none',

@@ -2,12 +2,12 @@ let showT;
 let canvasScaled = false;
 let ungulator = 2;
 let wavelength = .3;
-let radius = 100;
+let radius = 140;
 let animate;
 
 const canvas = document.getElementById('bubble');
 const ctx = canvas.getContext('2d');
-const POLY = 20;
+const POLY = 35;
 const STEP = 3*Math.PI/POLY;
 const LENGTH = 2 * Math.PI;
 const CENTER = {
@@ -33,7 +33,7 @@ var bindEvents = function() {
       canvas.classList.add('tease');
       wavelength = +freq;
 
-      let steps = 30;
+      let steps = 50;
       let count = 0;
       function tick() {
         if(count < steps) {
@@ -144,7 +144,7 @@ var preLoadCanvasImages = function() {
     }
   ];
   images.forEach(function(image){
-    const size = 2560;
+    const size = 2880;
     var img = new Image();
     var tempTx = image.el.getContext('2d');
     img.src = `images/${image.src}.png`;
